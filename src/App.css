@@ -1,6 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+/*************************General Css*******************************/
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.08rem;
+}
+
+h4{
+  font-size: 1.5rem;
+}
+
+h5{
+  font-size: 2rem;
+}
+
+.regular {
+  font-size: 0.93rem;
+}
+
+
+.font{
+  font-family: Comfortaa;
+}
+
+.fontOther{
+  font-family: Montserrat;
+  font-weight: bolder;
+}
+
+.fontOther2{
+  font-family:'Titillium Web';
+  font-weight: bolder;
+}
+
+.white{
+  color: white;
+}
+
+.black{
+  color: black;
+}
+
+.red{
+  color: red;
+}
+
+.yellow{
+  color:yellow;
+}
+
+.orange{
+  color: rgb(196, 106, 4);
+}
+
+.bold{
+  font-weight: bolder;
+}
+
+.flex{
+  display: flex;
+}
+
+.flexCol{
+  display: flex;
+  flex-direction: column;
+}
+
+.justifyCenter{
+  justify-content: center;
+}
+
+.spaceAround{
+  justify-content: space-around ;
+}
+
+.spaceBetween{
+  justify-content: space-between ;
+}
+
+.alignCenter{
+  align-items: center;
+}
+
+.paddingBottom50vh{
+  padding-bottom: 50vh;
+}
+
+.paddingBottom{
+  padding-bottom: 15%;
+}
+
+.bottom {
+  margin-bottom: 25vh;
+  padding-bottom: 20vh;
+}
+
+.paddingBottom5{
+  padding-bottom: 5%;
+}
+.bottomMar{
+  margin-bottom: 10vh;
+}
+
+.marRigh{
+  margin-right: 1rem;
+}
+
+.mr20{
+  margin-right: 3rem;
+}
+
+.borderRadius{
+  border-radius: .5rem;
+}
+
+.borderRadiusTop{
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+.borderRadiusBottom{
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+/******************************************************************/
+
+#root{
+  width: 100vw;
+}
+
+
 .App {
   text-align: center;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
 }
+
+#footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -13,20 +175,658 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen and (max-width: 925px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  html {
+    font-size: 12px;
+  }
+
+  #header {
+    display: none;
+  }
+
+  .leftDiv {
+    padding: 0 15%;
+    border: 3px solid red;
+  }
+
+  #homeP{
+    margin-top: -10%;
+    width: 50%;
+    font-size: 95%;
+    border: 3px solid lime;
+  }
+
+  #companyName {
+    font-size: 450%;
+  }
+
+}
+
+ .top {
+  margin-top: 8rem; 
+} 
+
+/***********************GetQuote.css***********************************************/
+#leftFormFields{
+  
+}
+
+.ml50{
+  /* margin-left: 50px; */
+  margin-left: 3vw;
+}
+
+.getQuote{
+  display: flex;
+  margin-top: 15vh;
+  margin-bottom: 30vh;
+  width: 90%;
+  height: 90vh;
+  background-image: linear-gradient(
+90deg
+,rgba(66,123,202,1) 48%,rgba(73,174,223,1) 100%) !important;
+border: 10px solid black;
+border-radius: .5rem;
+}
+
+.pictureBox{
+  background-color: green;
+  background-image: url('./sigmund-L8mclmMuWjg-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 30%; 
+  height: 100%;
+  opacity: 0.75;
+}
+
+.quoteBox{
+  width: 70%;
+  justify-content: center;
+}
+
+.flexCol > input {
+  width: 20vw;
+  height: 5vh;;
+  background-color: rgba(66,123,202,1);
+  border: 2px solid white;
+  margin-top: 1vh;
+}
+
+.flexCol > select {
+  width: 20.5vw;
+  height: 6vh;
+  background-color: rgba(66,123,202,1);
+  border: 2px solid white;
+  margin-top: 1vh;
+}
+
+.flexCol > textarea {
+  width: 47vw;
+  height: 25vh;
+  background-color: rgba(66,123,202,1);
+  border: 2px solid white;
+}
+
+.textShadow{
+  text-shadow: 0 0 3px yellow, 0 0 5px #000;
+}
+
+.mt10{
+  margin-top: 0.625rem;
+}
+
+.submitBtn{
+  background-color: rgba(66,123,202,1);
+  margin-top: 3vh;
+}
+/***************************Header.css*******************************************/
+header {
+  position: fixed;
+  top: 0px;
+  z-index: 5;
+}
+
+.header {
+  background-color: black;
+  width: 100vw;
+  justify-content: flex-end;
+}
+
+#header{
+  height: 5rem;
+  border-bottom: 8px solid yellow;
+  transition: height 300ms ease-in-out;
+  transition: border-bottom 400ms ease-in-out;
+}
+
+#header.sticky {
+  height: 3rem;
+  border-bottom: 2px solid yellow;
+  transition: height 300ms ease-in-out;
+  transition: border-bottom 400ms ease-in-out;
+}
+
+.header > img {
+  /* max-height: 100%; */
+}
+
+.logo{
+  top: -1vw;
+  overflow: visible;  
+  position: absolute;
+  /* bottom: 0; */
+  left: 3vw;
+  /* right: 0; */
+  border-radius: 100%;
+  padding-bottom: 7vh;
+}
+
+#logo{
+  height: 25vh;
+  transition: height 500ms ease-in-out;  
+}
+
+#logo.sticky{
+  height: 7vh;
+  transition: height 500ms ease-in-out;   
+  top: 0.25vh;
+  margin-left: 3vw;
+}
+
+.navLinks{
+  flex-grow: 1;
+  margin-left: 25%;
+}
+
+.phone {
+  display: flex;
+  
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.blue {
+  color: blue;
+  
+}
+
+.big {
+  font-size: 2rem;
+}
+
+.bigger {
+  font-size: 1.1rem;
+  
+}
+
+ ul {
+  flex: 1;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  
+} 
+
+li {
+  width: 100%;
+  /* font-family: 'Josefin Sans', cursive; */
+  font-family: Comfortaa;
+  
+}
+
+.fontSize1{
+  font-size: 1rem;
+}
+
+.link {
+  position: relative;
+  text-decoration: none; 
+}
+
+.link:hover {
+  color: white;
+}
+
+.link::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: top left;
+  background-color: red;
+  transition: transform 0.3s ease;
+}
+
+.link:hover::before{
+  transform: scaleX(1);
+}
+
+
+
+
+.exclude {
+  border: none !important;
+}
+
+#expand {
+  transition: transform 250ms;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1vh;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  text-align: left;
+  display: none;
+  position: absolute;
+  padding-top: .5vh;
+  top: 4.5vh;
+  /* left: 4vw; */
+  background-color: black;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  padding: 2vh 2vw;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    color: black;
+    background-color: yellow;
+  }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+.footer {
+    background-color: #000;
+    width: 100vw;
+    height: 50vh;
+    justify-content: space-evenly;
+    border-top: 6px solid yellow;
+}
+
+.ftlogo{
+    width: 30vw;
+}
+
+.ftQte{
+  background-color: #000;
+  border: 2px solid  rgba(66,123,202,1);
+  margin-top: 3vh;
+}
+
+.ftQte:hover{
+    background-color: rgba(66,123,202,1);
+}
+
+.square_btn{
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.square_btn:hover {
+    
+}
+
+.square_btn:active{
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0,0,0, 0.2);
+  border-bottom: none;
+}
+
+.fl_inst2{
+  color: #FFF;
+  border-radius: 7px;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 190px;
+  text-align: center;
+  font-size: 20px;
+  vertical-align: middle;
+  background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  overflow: hidden;
+  text-decoration:none;
+}
+
+.fl_inst2:before{/*gradient*/
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+  background: linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+}
+
+.fl_inst2 .fa-instagram{/*icon*/
+  font-size: 35px;
+  position: relative;
+  top: 4px;
+}
+
+.fl_inst2 span {
+  display:inline-block;
+  position: relative;
+  transition: .5s}
+
+.fl_inst2:hover span{/*HoverEffect*/
+  -webkit-transform: rotateX(360deg);
+  -ms-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}
+/***************************Home.css*******************************************/
+.marTop{
+  margin-top: 23%;
+}
+
+#homeP{
+  width:33vw;
+}
+
+.Banner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90vh;
+  background-color: lightgrey;
+  background-image: url("./joao-alexandre-paulo-qA005Vbp7jk-unsplash.jpg");
+  background-size: cover;
+  border-bottom: 6px solid red;
+}
+
+.parent {
+  width: 450px;
+  height: 400px;
+  position: relative;
+}
+
+
+.quote {
+  width: 85vw;
+  height: 15vh;
+  border-radius: .5rem;
+  background-color: rgb(83, 235, 103);
+  position: absolute; 
+  bottom: -22%;
+  border: 3px solid darkgreen;
+}
+
+.leftDiv {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 50vh;
+  top: 15vh;
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 1%;
+}
+
+.bttn {
+  border: 1px solid white;
+  background-color:  #fff;
+  color: rgb(83, 235, 103);
+  text-align: center;
+  font-size: 1.1rem;
+  width: 13.75rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2.25rem;
+  box-shadow: 0 0.625rem 1.25rem -0.5rem rgba(0,0,0, .7);
+  height: 10vh;
+}
+
+.bttn{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.bttn:after {
+  
+  position: absolute;
+  opacity: 0;  
+  top: 0.875rem;
+  transition: 0.5s;
+}
+
+.bttn:hover{
+  background-color:  #427bca;
+  color: #fff;
+}
+
+#greenBtn:hover{
+  background-color:  darkgreen;
+  color: #fff;
+}
+
+.bttn:hover:after {
+  opacity: 1;
+}
+
+/***************************PictureGrid.css*******************************************/
+
+.gridContainer {
+  display: grid;
+  width: 90%;
+  height: 80vh;
+  grid-template-columns: 40% 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  border: 0.625rem solid black;
+}
+
+.box1 {
+  background-color: purple;
+  grid-area: 1 / 1 / span 2 / span 1;
+  background-image: url("./dimas-ardirosatama-jmhqXeZGSCs-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+  justify-content: center;
+}
+
+#head1{
+  display: none;
+  transition: display .2s ease;
+}
+
+
+.box2 {
+  background-color: yellow;
+  grid-area: 1 / 2 / span 1 / span 1;
+  background-image: url("./marcelo-leal-6UeBe2HqziA-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+  justify-content: center;
+}
+
+.box3 {
+  background-color: rgb(2,153,222);
+  grid-area: 1 / 3 / span 1 / span 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.box4 {
+  background-color: blue;
+  grid-area: 2 / 2 / span 1 / span 2;
+  background-image: url("./alexandre-lion-LsEL4F5POBI-unsplash.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  justify-content: center;
 }
+
+.hoverCover:hover{
+  filter: grayscale(0%);
+  transition: filter 350ms ease-in-out;
+}
+
+.smaller {
+  font-size: .9rem;
+  margin: 0.3125rem;
+}
+
+.container > div:hover {
+  filter: grayscale(0%);
+  transition: filter 450ms ease-in-out;
+}
+
+/***************************Satisfaction.css*******************************************/
+  
+
+.satisfaction {
+  background-color: lightgrey;
+  width: 80%;
+  height: 85vh;
+  margin-bottom: 5%;
+  padding: 0 2%;
+  border: 0.625rem solid black;
+}
+
+.left {
+  width: 50%;
+}
+
+.blueText {
+  color: #427bca;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.blueBtn {
+  background-color: white;
+  color: #427bca;
+  border: 4px solid #427bca;
+}
+
+
+.right {
+  width: 50%;
+  height: 50%;
+}
+
+.right > li {
+  font-family: Montserrat;
+  font-size: 1.3rem;
+}
+
+.collapsible {
+  background-color: lightgrey;
+  color: #000;
+  cursor: pointer;
+  padding: 3vh;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.5rem;
+  margin-top: 1vh;
+}
+
+.active, .collapsible:hover {
+  background-color: yellow;
+}
+
+.content {
+  padding: 0 1.125rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgb(83, 235, 103);
+}
+
+.small {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/***************************Services.css*******************************************/
+.grid3x3{
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  width: 60vw;
+  height: 70vh;
+  /* gap: 15px 15px; */
+  gap: 10%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.serviceBox{
+  width: 12vw;
+  height: 25vh;
+  padding: 4vh 2vw;
+  margin: 0 2vw;
+  /* border-bottom: 6px solid #407ab0; */
+  border-bottom: 6px solid red;
+  box-shadow: -5px 0px 8px lightgrey, 5px 0px 8px lightgrey;
+}
+
+.grayText{
+  color: lightslategrey;
+  font-size: .7rem;
+}
+
+.blueLink{
+  color: #407ab0;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  text-decoration: none;
+  margin-top: 1.25rem;
+}
+
+.blueLink:hover{
+  color: lightsteelblue;
+}
+
 
 @keyframes App-logo-spin {
   from {

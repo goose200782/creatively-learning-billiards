@@ -1,22 +1,58 @@
-import React, { useState} from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import TodoOrig from './TodoOrig';
 import './App.css';
+import Header from './Header';
+import Main from './Main';
+import Contact from './Contact';
+import GetQuote from './GetQuote';
+import Services from './Services';
+import Footer from './Footer';
+import ScrollToTop from './ScrollToTop';
+import AboutUs from './AboutUs';
+import Book from './Book';
+import League from './League';
 
 function App() {
-  const [todos, setTodos] = useState(['Take dogs for a walk', 'Take the rubbish out']);
+  
 
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-      <input />
-      <button>Add To Do</button>
-      
-
-      <ul>
-        {todos.map(todo => (
-          <li>{todo}</li>
-        ))}
+    <div className="App justifyCenter flexCol alignCenter paddingBottom50vh">
+      <Router>
+            <ScrollToTop />
+            <header><Header /></header>
+            <Switch id='content-wrap'>
+              <Route path="/league">
+                <League />
+              </Route>
+              <Route path="/book">
+                <Book />
+              </Route>
+              <Route path="/aboutUs">
+                <AboutUs />
+              </Route>
+              <Route path="/services">
+                <Services />
+              </Route>
+              <Route path="/quote">
+                <GetQuote />
+              </Route>
+              <Route path="/contact">
+                <Contact />
+              </Route>
+              <Route path="/">
+                <Main />
+              </Route>
+            </Switch>
+          {/* </div> */}
+          <Footer />
+        {/* </div> */}
         
-      </ul>
+      </Router>
+      
+        
+      
+      {/* <TodoOrig /> */}
     </div>
   );
 }
