@@ -3,6 +3,7 @@ import './App2.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ScrollToTop from './ScrollToTop';
 import Header2 from './Header2';
+import Main from './Main';
 
 
 function App2() {
@@ -10,10 +11,10 @@ function App2() {
         <div>
             <Router>
                 <ScrollToTop />
-                <Header2 />
+                <header><Header2 id='header' /></header>
                 <Switch>
                     <Route path="/">
-                        
+                        <Main />
                     </Route>
                 </Switch>
                 

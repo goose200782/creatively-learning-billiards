@@ -4,7 +4,7 @@ function Home() {
     return (
         <div  className='Banner white font flexCol'>
                 <div id='home'>
-                    <div className='leftDiv alignCenter'>
+                    <div className='leftDiv spaceBetween'>
                         <h1 className='marTop red bold fontOther2 textShadow' id='companyName'><span className='yellow'>Creatively</span><span className='orange'> Learning</span> Billiards</h1>
                         <p className='textShadow' id='homeP'>
                         Billiard lessons for all skill level players from kids, adults, amateur and pros! Using modern technology to create better Pool Players & Champions⚪🎱🔴

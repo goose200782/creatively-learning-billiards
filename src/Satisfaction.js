@@ -40,7 +40,7 @@ function Satisfaction() {
     }
 
     return (
-        <div className='satisfaction top flex font black alignCenter borderRadius'>
+        <div className='satisfaction top font black alignCenter borderRadius'>
 
             <div className='left flexCol'>
                 <h4>At <span className='yellow big bold'>Creatively</span><span className='orange big bold'> Learning</span><span className='red big bold'> Billiards</span></h4>
